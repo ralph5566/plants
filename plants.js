@@ -2,7 +2,7 @@ const PLANTS = [
     {
         no: '01',
         name: '大花咸豐草',
-        img: '/img/IMG_NO01.png',
+        img: '.img/IMG_NO01.png',
         type: '草本植物',
         genus: '菊科鬼針草屬',
         title: '毫不起眼 卻暗藏威脅 隱身於都市中...',
@@ -13,7 +13,7 @@ const PLANTS = [
     {
         no: '02',
         name: '非洲鳳仙花',
-        img: '/img/IMG_NO02.png',
+        img: './img/IMG_NO02.png',
         type: '草本植物',
         genus: '鳳仙花科鳳仙花屬',
         title: '鳳凰般美麗又具生命力 卻也讓其他植物黯淡...',
@@ -22,7 +22,7 @@ const PLANTS = [
     {
         no: '03',
         name: '巴西水竹草',
-        img: '/img/IMG_NO03.png',
+        img: './img/IMG_NO03.png',
         type: '草本植物',
         genus: '鴨跖草科水竹草屬',
         title: '不斷 不斷的復生 覆蓋大地的災害...',
@@ -31,7 +31,7 @@ const PLANTS = [
     {
         no: '04',
         name: '小花蔓澤蘭',
-        img: '/img/IMG_NO04.png',
+        img: './img/IMG_NO04.png',
         type: '攀爬植物',
         genus: '菊科蔓澤蘭屬',
         title: '所到之處 寸草不生 有著「綠癌」的稱號...',
@@ -40,7 +40,7 @@ const PLANTS = [
     {
         no: '05',
         name: '水芙蓉',
-        img: '/img/IMG_NO05.png',
+        img: './img/IMG_NO05.png',
         type: '水生植物',
         genus: '天南星科大薸屬',
         title: '漂浮在水面上 但在水中隱藏什麼...',
@@ -49,7 +49,7 @@ const PLANTS = [
     {
         no: '06',
         name: '布袋蓮',
-        img: '/img/IMG_NO06.png',
+        img: './img/IMG_NO06.png',
         type: '水生植物',
         genus: '雨久花科梭魚草屬',
         title: '原本只有一朵花 不知不覺佔據了水面...',
@@ -58,7 +58,7 @@ const PLANTS = [
     {
         no: '07',
         name: '互花米草',
-        img: '/img/IMG_NO07.png',
+        img: './img/IMG_NO07.png',
         type: '草本植物',
         genus: '禾本科鼠尾粟屬',
         title: '來自大海的另一端 沿海生態的入侵者...',
@@ -67,7 +67,7 @@ const PLANTS = [
     {
         no: '08',
         name: '馬纓丹',
-        img: '/img/IMG_NO08.png',
+        img: './img/IMG_NO08.png',
         type: '草本植物',
         genus: '馬鞭草科馬纓丹屬',
         title: '越是艷麗 越是危險 警告著所有人...',
@@ -76,7 +76,7 @@ const PLANTS = [
     {
         no: '09',
         name: '紫花藿香薊',
-        img: '/img/IMG_NO09.png',
+        img: './img/IMG_NO09.png',
         type: '草本植物',
         genus: '菊科藿香薊屬',
         title: '看似浪漫的花 卻是無形的壓迫...',
@@ -85,7 +85,7 @@ const PLANTS = [
     {
         no: '10',
         name: '貓腥草',
-        img: '/img/IMG_NO10.png',
+        img: './img/IMG_NO10.png',
         type: '草本植物',
         genus: '菊科澤蘭屬',
         title: '死亡的氣息 靜靜地在一隅生長...',
@@ -94,7 +94,7 @@ const PLANTS = [
     {
         no: '11',
         name: '豬草',
-        img: '/img/IMG_NO11.png',
+        img: './img/IMG_NO11.png',
         type: '草本植物',
         genus: '菊科豬草屬',
         title: '每逢九月 百萬的花粉 是人們的噩夢...',
@@ -103,7 +103,7 @@ const PLANTS = [
     {
         no: '12',
         name: '美洲含羞草',
-        img: '/img/IMG_NO12.png',
+        img: './img/IMG_NO12.png',
         type: '藤本植物',
         genus: '豆科含羞草屬',
         title: '身上的刺絕不是裝飾 是生存的防禦...',
@@ -112,7 +112,7 @@ const PLANTS = [
     {
         no: '13',
         name: '銀膠菊',
-        img: '/img/IMG_NO13.png',
+        img: './img/IMG_NO13.png',
         type: '草本植物',
         genus: '菊科銀膠菊屬',
         title: '如同滿天星的白花 碰到就會引起不適...',
@@ -121,7 +121,7 @@ const PLANTS = [
     {
         no: '14',
         name: '銀合歡',
-        img: '/img/IMG_NO14.png',
+        img: './img/IMG_NO14.png',
         type: '灌木',
         genus: '豆科銀合歡屬',
         title: '弱者只有死亡一途...',
@@ -130,7 +130,7 @@ const PLANTS = [
     {
         no: '15',
         name: '日本菟絲子',
-        img: '/img/IMG_NO15.png',
+        img: './img/IMG_NO15.png',
         type: '寄生植物',
         genus: '旋花科菟絲子屬',
         title: '吸血的不死怪物 即使斷肢也能重生...',
