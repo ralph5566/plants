@@ -1,0 +1,6 @@
+#timeBar::-webkit-progress-bar {
+    background: #80eba7;
+}
+#timeBar::-webkit-progress-value {
+    background: #16a34a;
+}

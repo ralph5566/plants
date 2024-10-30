@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+body {
+    font-family: 'Chocolate Classical Sans', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+    color: #c3f3f3;
+    line-height: 2.5;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    background-image: url('/img/IMG_Bgc3.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul :hover {
+    color: #d1a952;
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #1f1f1c;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

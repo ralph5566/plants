@@ -1,0 +1,27 @@
+#question-time::-webkit-progress-bar {
+    background: #d1a952;
+}
+#question-time::-webkit-progress-value {
+    background: #947533;
+}
+
+#question-time.answer::-webkit-progress-bar {
+    background: #134b70;
+}
+#question-time.answer::-webkit-progress-value {
+    background: #134b70;
+}
+
+#question-time.correct::-webkit-progress-bar {
+    background: #16a34a;
+}
+#question-time.correct::-webkit-progress-value {
+    background: #16a34a;
+}
+
+#question-time.wrong::-webkit-progress-bar {
+    background: #b91c1c;
+}
+#question-time.wrong::-webkit-progress-value {
+    background: #b91c1c;
+}
