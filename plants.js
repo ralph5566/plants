@@ -2,7 +2,7 @@ const PLANTS = [
     {
         no: '01',
         name: '大花咸豐草',
-        img: '.img/IMG_NO01.png',
+        img: './img/IMG_NO01.png',
         type: '草本植物',
         genus: '菊科鬼針草屬',
         title: '毫不起眼 卻暗藏威脅 隱身於都市中...',
