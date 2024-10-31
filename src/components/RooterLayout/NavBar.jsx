@@ -33,7 +33,7 @@ const NavBar = ({ showModal, onBarClose }) => {
 
                     <div className="flex flex-col">
                         <Link
-                            to="/"
+                            to="/plants"
                             onClick={(evt) => {
                                 evt.preventDefault()
                                 navigate('/'), onBarClose()
@@ -41,7 +41,7 @@ const NavBar = ({ showModal, onBarClose }) => {
                         >
                             <img
                                 alt="LOGO"
-                                src="/img/IMG_logo02.png"
+                                src="plants/img/IMG_logo02.png"
                                 // src="http://localhost:3000/images/IMG_logo02.png"
                                 className="mx-auto w-36 pb-4 cursor-pointer "
                             />
@@ -61,7 +61,7 @@ const NavBar = ({ showModal, onBarClose }) => {
                                 關於我們
                             </NavLink>
                             <NavLink
-                                to="/plants"
+                                to="/illustrate"
                                 onClick={plantsHandler}
                                 className={({ isActive }) =>
                                     isActive ? nav_active : nav_link

@@ -6,7 +6,11 @@ const End = () => {
                     I n v a s i v e - P l a n t s @ 2 0 2 4
                 </p>
 
-                <img src="/img/End.png" className="m-auto w-[80%]" alt="END" />
+                <img
+                    src="plants/img/End.png"
+                    className="m-auto w-[80%]"
+                    alt="END"
+                />
                 {/* <img
                     src="http://localhost:3000/images/End.png"
                     className="m-auto w-[80%]"

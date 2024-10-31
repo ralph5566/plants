@@ -30,13 +30,13 @@ const About = () => {
                     className="relative cursor-pointer"
                 >
                     <img
-                        src="/img/IMG_003.JPG"
+                        src="plants/img/IMG_003.JPG"
                         // src="http://localhost:3000/images/IMG_003.JPG"
                         alt="03"
                         className=" relative w-full h-[100%] hover:scale-105 duration-300"
                     />
                     <img
-                        src="/img/IMG_play.png"
+                        src="plants/img/IMG_play.png"
                         // src="http://localhost:3000/images/IMG_play.png"
                         className="z-10 absolute top-[40%] right-[86%] w-1/4 hover:scale-105"
                     />
@@ -51,7 +51,11 @@ const About = () => {
                     透過認識與教育，了解並認識他們，揭開真面目，降妖除魔
                 </p>
 
-                <img className={cssCss} src="/img/IMG_NO08_3.png" alt="02" />
+                <img
+                    className={cssCss}
+                    src="plants/img/IMG_NO08_3.png"
+                    alt="02"
+                />
                 {/* <img
                     className={cssCss}
                     src="http://localhost:3000/images/IMG_NO08_3.png"

@@ -31,9 +31,9 @@ const HeaderBar = ({ onShowBar }) => {
         <>
             <header className="fixed justify-between p-5 items-center w-full overflow-hidden flex max-md:hidden z-[5]">
                 <ul className=" inline-flex items-center">
-                    <Link to="/">
+                    <Link to="/plants">
                         <img
-                            src="/img/IMG_logo02.png"
+                            src="plants/img/IMG_logo02.png"
                             // src="http://localhost:3000/images/IMG_logo02.png"
                             className="w-24 me-7 relative top-px cursor-pointer"
                             alt="LOGO"
@@ -48,7 +48,7 @@ const HeaderBar = ({ onShowBar }) => {
                         關於我們
                     </NavLink>
                     <NavLink
-                        to="/plants"
+                        to="/illustrate"
                         className={({ isActive }) =>
                             isActive ? nav_active : nav_link
                         }
@@ -82,7 +82,7 @@ const HeaderBar = ({ onShowBar }) => {
                     type="button"
                     onClick={() => onShowBar()}
                 >
-                    <img src="/img/IMG_bar.png" alt="bar" />
+                    <img src="plants/img/IMG_bar.png" alt="bar" />
                     {/* <img
                         src="http://localhost:3000/images/IMG_bar.png"
                         alt="bar"
@@ -91,7 +91,7 @@ const HeaderBar = ({ onShowBar }) => {
                 <Link to="/">
                     <img
                         alt="LOGO"
-                        src="/img/IMG_logo03.png"
+                        src="plants/img/IMG_logo03.png"
                         // src="http://localhost:3000/images/IMG_logo03.png"
                         className="w-40 relative top-px cursor-pointer "
                     />

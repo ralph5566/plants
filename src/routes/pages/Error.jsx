@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Button from '../../components/Tools/Button'
 import { useRouteError } from 'react-router-dom'
-import RootLayout from './RootLayout'
+// import RootLayout from './RootLayout'
 import Header from '../../components/RooterLayout/Header'
 import End from '../../components/RooterLayout/End'
 
@@ -33,7 +33,7 @@ const Error = () => {
             <div className="error pt-20 h-screen">
                 <img
                     className="w-1/2 mx-auto max-md:w-5/6"
-                    src="img/IMG_005.jpg"
+                    src="plants/img/IMG_005.jpg"
                 />
                 <div className="my-10">
                     <h1 className="text-5xl mb-3">{title}</h1>

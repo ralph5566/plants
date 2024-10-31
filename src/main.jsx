@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -25,11 +25,11 @@ const router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {
-                index: true,
+                index: '/plants',
                 element: <App />,
             },
             {
-                path: '/plants',
+                path: '/illustrate',
                 id: 'plants-detail',
                 children: [
                     {

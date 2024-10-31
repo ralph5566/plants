@@ -24,7 +24,7 @@ const Game = () => {
                             <div className="flex flex-col h-full bg-bgcB">
                                 <img
                                     alt="logo"
-                                    src="/img/IMG_logo03.png"
+                                    src="plants/img/IMG_logo03.png"
                                     // src={`http://localhost:3000/images/IMG_logo03.png`}
                                     className="w-1/6 mt-48 mx-auto max-md:w-1/2 max-sss:mt-10"
                                 />
