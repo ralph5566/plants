@@ -24,7 +24,7 @@ const Game = () => {
                             <div className="flex flex-col h-full bg-bgcB">
                                 <img
                                     alt="logo"
-                                    src="plants/img/IMG_logo03.png"
+                                    src="/plants/img/IMG_logo03.png"
                                     // src={`http://localhost:3000/images/IMG_logo03.png`}
                                     className="w-1/6 mt-48 mx-auto max-md:w-1/2 max-sss:mt-10"
                                 />
@@ -33,7 +33,7 @@ const Game = () => {
                                 </h1>
                                 <button
                                     onClick={startGameHandler}
-                                    className="mt-20 max-ss:my-20 w-1/3 z-10 px-3 mx-auto shadow-2m hover:shadow-3m hover:text-yy"
+                                    className="mt-20 max-ss:my-20 w-1/3 z-10 px-3 mx-auto shadow-2m rounded-lg hover:shadow-3m hover:text-yy"
                                 >
                                     開始遊戲
                                 </button>

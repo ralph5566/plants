@@ -3,6 +3,8 @@ import Modal from '../Modal/Modal'
 import { useDispatch } from 'react-redux'
 import { plantNoActions } from '../../redux/PlantNo'
 // import { showBarActions } from '../../redux/showBarModal'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = ({ showModal, onBarClose }) => {
     const dispatch = useDispatch()
@@ -17,7 +19,7 @@ const NavBar = ({ showModal, onBarClose }) => {
         evt.preventDefault()
         onBarClose()
         dispatch(plantNoActions.setNo('01'))
-        navigate('/plants')
+        navigate('/illustrate')
     }
 
     return (
@@ -25,10 +27,13 @@ const NavBar = ({ showModal, onBarClose }) => {
             <Modal open={showModal}>
                 <div className="mx-auto my-auto">
                     <button
-                        className=" absolute w-10 h-10 top-5 right-4 t text-4xl"
+                        className=" absolute w-10 h-10 top-5 right-4 t text-4xl "
                         onClick={() => onBarClose()}
                     >
-                        X
+                        <FontAwesomeIcon
+                            icon={faXmark}
+                            className="hover:text-yy"
+                        />
                     </button>
 
                     <div className="flex flex-col">
@@ -41,11 +46,12 @@ const NavBar = ({ showModal, onBarClose }) => {
                         >
                             <img
                                 alt="LOGO"
-                                src="plants/img/IMG_logo02.png"
+                                src="/plants/img/IMG_logo02.png"
                                 // src="http://localhost:3000/images/IMG_logo02.png"
                                 className="mx-auto w-36 pb-4 cursor-pointer "
                             />
                         </Link>
+
                         {/* <hr className="mb-6 w-4/5 mx-auto" /> */}
                         <div className="flex flex-col py-1 text-xl">
                             <NavLink

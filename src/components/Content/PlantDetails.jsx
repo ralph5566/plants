@@ -4,6 +4,8 @@ import Modal from '../Modal/Modal'
 import { useEffect } from 'react'
 import ProgressBar from './ProgressBar'
 // import Plant from '../components/Plant'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const TIMER = 8000
 
@@ -41,10 +43,10 @@ const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
         <>
             <Modal open={plantModal}>
                 <button
-                    className=" absolute w-10 h-10 top-5 right-4 t text-4xl"
+                    className=" absolute w-10 h-10 top-5 right-4 t text-4xl hover:text-yy"
                     onClick={onPlant}
                 >
-                    X
+                    <FontAwesomeIcon icon={faXmark} />
                 </button>
                 <div className="bg-content-bgc bg-cover w-full">
                     <main className="flex flex-col w-[80%] mx-auto my-auto max-md:mt-5 max-md:mb-20 ">

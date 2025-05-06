@@ -1,4 +1,6 @@
 import Modal from '../Modal/Modal'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const SpecialDetail = ({ onShow, img, showModal }) => {
     return (
@@ -9,7 +11,7 @@ const SpecialDetail = ({ onShow, img, showModal }) => {
                         className=" absolute w-10 h-10 top-5 right-4 t text-4xl"
                         onClick={onShow}
                     >
-                        X
+                        <FontAwesomeIcon icon={faXmark} />
                     </button>
                     <img
                         src={img}

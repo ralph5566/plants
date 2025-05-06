@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Modal from '../../components/Modal/Modal'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     const [showVideo, setShowVideo] = useState(false)
@@ -36,7 +38,7 @@ const About = () => {
                         className=" relative w-full h-[100%] hover:scale-105 duration-300"
                     />
                     <img
-                        src="plants/img/IMG_play.png"
+                        src="/plants/img/IMG_play.png"
                         // src="http://localhost:3000/images/IMG_play.png"
                         className="z-10 absolute top-[40%] right-[86%] w-1/4 hover:scale-105"
                     />
@@ -53,7 +55,7 @@ const About = () => {
 
                 <img
                     className={cssCss}
-                    src="plants/img/IMG_NO08_3.png"
+                    src="/plants/img/IMG_NO08_3.png"
                     alt="02"
                 />
                 {/* <img
@@ -69,7 +71,7 @@ const About = () => {
                         className=" absolute w-10 h-10 top-5 right-4 t text-4xl"
                         onClick={showVideoHandler}
                     >
-                        X
+                        <FontAwesomeIcon icon={faXmark} />
                     </button>
                     <iframe
                         // width="560"

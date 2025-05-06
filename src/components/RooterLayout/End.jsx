@@ -7,7 +7,7 @@ const End = () => {
                 </p>
 
                 <img
-                    src="plants/img/End.png"
+                    src="/plants/img/End.png"
                     className="m-auto w-[80%]"
                     alt="END"
                 />

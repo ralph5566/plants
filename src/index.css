@@ -11,10 +11,11 @@ body {
     margin: 0;
 
     text-align: center;
-    color: #c3f3f3;
+    /* color: #c3f3f3; */
     line-height: 2.5;
     box-sizing: border-box;
     text-align: center;
+    transition: all 0.4s ease-in-out;
 }
 
 body {

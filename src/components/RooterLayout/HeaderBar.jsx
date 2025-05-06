@@ -20,7 +20,7 @@ const HeaderBar = ({ onShowBar }) => {
     function plantsHandler(evt) {
         evt.preventDefault()
         dispatch(plantNoActions.setNo('01'))
-        navigate('/plants')
+        navigate('/illustrate')
     }
 
     // const showBarHandler = () => {
@@ -33,7 +33,7 @@ const HeaderBar = ({ onShowBar }) => {
                 <ul className=" inline-flex items-center">
                     <Link to="/plants">
                         <img
-                            src="plants/img/IMG_logo02.png"
+                            src="/plants/img/IMG_logo02.png"
                             // src="http://localhost:3000/images/IMG_logo02.png"
                             className="w-24 me-7 relative top-px cursor-pointer"
                             alt="LOGO"
@@ -82,7 +82,7 @@ const HeaderBar = ({ onShowBar }) => {
                     type="button"
                     onClick={() => onShowBar()}
                 >
-                    <img src="plants/img/IMG_bar.png" alt="bar" />
+                    <img src="/plants/img/IMG_bar.png" alt="bar" />
                     {/* <img
                         src="http://localhost:3000/images/IMG_bar.png"
                         alt="bar"
@@ -91,7 +91,7 @@ const HeaderBar = ({ onShowBar }) => {
                 <Link to="/">
                     <img
                         alt="LOGO"
-                        src="plants/img/IMG_logo03.png"
+                        src="/plants/img/IMG_logo03.png"
                         // src="http://localhost:3000/images/IMG_logo03.png"
                         className="w-40 relative top-px cursor-pointer "
                     />
