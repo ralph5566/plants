@@ -11,7 +11,7 @@ import { authActions } from '../../redux/Sign'
 // import { showBarActions } from '../../redux/showBarModal'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUpLong } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     // const { isSign, signChange } = useContext(CheckSign)
@@ -34,17 +34,23 @@ const Header = () => {
     }, [])
 
     function handlerToTop() {
-        window.scrollTo(0, 0)
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
     }
 
     return (
         <>
             <HeaderBar onShowBar={barShowHandler} />
             <Button
-                className="fixed z-20 duration-300 left-10 bottom-10 h-10 w-10 rounded-lg hover:bg-yy shadow-2m hover:shadow-3m"
+                className="fixed z-20 duration-300 left-10 bottom-10 h-10 w-10 rounded-full hover:bg-yy  hover:shadow-3m"
                 onClick={handlerToTop}
             >
-                <FontAwesomeIcon icon={faUpLong} />
+                <FontAwesomeIcon
+                    icon={faArrowUp}
+                    className="text-md hover:scale-[1.5]"
+                />
             </Button>
 
             {showModal && (

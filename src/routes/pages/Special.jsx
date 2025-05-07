@@ -69,7 +69,7 @@ const Special = () => {
                                 <img
                                     id="FB"
                                     src={kk.img}
-                                    className="w-52 hover:text-yy"
+                                    className="w-52 hover:text-yy hover:scale-[1.1] hover:rotate-1 "
                                 />
                             </div>
                             <h1 className="text-xl mb-5 hover:text-yy">

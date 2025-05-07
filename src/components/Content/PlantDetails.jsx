@@ -13,15 +13,15 @@ const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
     // const post = useLoaderData()
     const postNo = plants[no - 1]
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            onPlant()
-        }, TIMER)
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         onPlant()
+    //     }, TIMER)
 
-        return () => {
-            clearTimeout(timer)
-        }
-    }, [onPlant])
+    //     return () => {
+    //         clearTimeout(timer)
+    //     }
+    // }, [onPlant])
 
     // if (!post) {
     //     return (
@@ -49,7 +49,7 @@ const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
                     <FontAwesomeIcon icon={faXmark} />
                 </button>
                 <div className="bg-content-bgc bg-cover w-full">
-                    <main className="flex flex-col w-[80%] mx-auto my-auto max-md:mt-5 max-md:mb-20 ">
+                    <main className="flex flex-col w-[80%] mx-auto my-auto items-center ">
                         <div className="w-[95%] mx-auto my-auto">
                             <img
                                 className=" w-80 max-xl:w-52 max-sm:w-36 mx-auto mt-5"
@@ -67,7 +67,7 @@ const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
                         </div>
                     </main>
 
-                    <ProgressBar timer={TIMER} />
+                    {/* <ProgressBar timer={TIMER} /> */}
                 </div>
             </Modal>
         </>

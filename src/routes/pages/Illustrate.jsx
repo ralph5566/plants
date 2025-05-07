@@ -41,6 +41,10 @@ function Illustrate() {
 
     function plantHandler(index, plantNo, event) {
         event.preventDefault()
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
         dispatch(plantNoActions.setNo(plantNo))
     }
 

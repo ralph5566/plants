@@ -7,6 +7,9 @@ import { useDispatch } from 'react-redux'
 import { plantNoActions } from '../../redux/PlantNo'
 // import { showBarActions } from '../../redux/showBarModal'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 const HeaderBar = ({ onShowBar }) => {
     // const { isSign, signChange } = useContext(CheckSign)
     const dispatch = useDispatch()
@@ -82,7 +85,10 @@ const HeaderBar = ({ onShowBar }) => {
                     type="button"
                     onClick={() => onShowBar()}
                 >
-                    <img src="/plants/img/IMG_bar.png" alt="bar" />
+                    <FontAwesomeIcon
+                        icon={faBars}
+                        className="text-5xl hover:text-yy"
+                    />
                     {/* <img
                         src="http://localhost:3000/images/IMG_bar.png"
                         alt="bar"

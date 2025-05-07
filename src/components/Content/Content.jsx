@@ -7,7 +7,7 @@ const Content = () => {
             <ContentSwiper />
 
             <div className="mx-auto">
-                <h1 className="text-4xl mt-20 mb-5 mx-8 leading-[3.5rem] hover:text-yy">
+                <h1 className="text-4xl mt-20 mb-5 mx-8 leading-[3.5rem] max-md:text-xl">
                     天 反 時 為 災 。 地 反 物 為 妖
                 </h1>
             </div>
