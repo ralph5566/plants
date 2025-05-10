@@ -14,6 +14,7 @@ import Illustrate from './routes/pages/Illustrate.jsx'
 import Game from './routes/pages/Game.jsx'
 import About from './routes/pages/About.jsx'
 import Error from './routes/pages/Error.jsx'
+import Test from './routes/pages/Test2.jsx'
 
 import Special from './routes/pages/Special.jsx'
 // const SpecialPage = lazy(() => import('./routes/pages/Special'))
@@ -64,6 +65,7 @@ const router = createBrowserRouter([
                 //     ),
             },
             { path: '/error', element: <Error /> },
+            { path: '/test', element: <Test /> },
         ],
     },
 ])

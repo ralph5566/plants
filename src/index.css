@@ -15,7 +15,7 @@ body {
     line-height: 2.5;
     box-sizing: border-box;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 
 body {
@@ -45,4 +45,56 @@ ul :hover {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* .modal {
+    animation: slide-up-fade-in 0.5s ease-out forwards;
+} */
+
+@keyframes slide-up-fade-in {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.illustrate {
+    animation: illustrate_plant 12s ease-in-out infinite;
+}
+
+@keyframes illustrate_plant {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    25% {
+        transform: rotate(-2deg) scale(0.95);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.02);
+    }
+    75% {
+        transform: rotate(-1deg) scale(0.98);
+    }
+    100% {
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* .toTop {
+    animation: toTheTop 1s ease-out forwards;
+} */
+
+@keyframes toTheTop {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

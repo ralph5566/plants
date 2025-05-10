@@ -62,19 +62,19 @@ const Special = () => {
                     return (
                         <button
                             key={index}
-                            className="hover:text-yy"
+                            className="hover:text-yy duration-700"
                             onClick={() => showModalHandler(index)}
                         >
-                            <div className="p-12 m-10 bg-content-bgc rounded-xl shadow-2m hover:shadow-3m ">
+                            <div className="p-12 m-10 bg-content-bgc rounded-xl shadow-2m hover:shadow-3m duration-700">
                                 <img
                                     id="FB"
                                     src={kk.img}
-                                    className="w-52 hover:text-yy hover:scale-[1.1] hover:rotate-1 "
+                                    className="w-52 hover:text-yy hover:scale-[1.1] hover:rotate-1 duration-700"
                                 />
                             </div>
-                            <h1 className="text-xl mb-5 hover:text-yy">
+                            {/* <h1 className="text-xl mb-5 hover:text-yy ">
                                 {kk.name}
-                            </h1>
+                            </h1> */}
                         </button>
                     )
                 })}

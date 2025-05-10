@@ -40,7 +40,7 @@ const Error = () => {
                     <p className="text-2xl mt-8">{message}</p>
                 </div>
 
-                <div className=" mb-20">
+                <div className="mb-20 duration-300">
                     <Link to="/">
                         <Button>首頁</Button>
                     </Link>

@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 // import CheckSign from '../../Context/Sign'
 import { useNavigate } from 'react-router-dom'
@@ -12,9 +12,20 @@ import { authActions } from '../../redux/Sign'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Header = () => {
     // const { isSign, signChange } = useContext(CheckSign)
+    const [showButton, setShowButton] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowButton(window.scrollY > 150)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -43,15 +54,27 @@ const Header = () => {
     return (
         <>
             <HeaderBar onShowBar={barShowHandler} />
-            <Button
-                className="fixed z-20 duration-300 left-10 bottom-10 h-10 w-10 rounded-full hover:bg-yy  hover:shadow-3m"
-                onClick={handlerToTop}
-            >
-                <FontAwesomeIcon
-                    icon={faArrowUp}
-                    className="text-md hover:scale-[1.5]"
-                />
-            </Button>
+            <AnimatePresence>
+                {showButton && (
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                        exit={{ y: -30, opacity: 0 }}
+                        className="fixed bottom-10 left-10 z-50"
+                    >
+                        <Button
+                            className="bg-midnight h-10 w-10 rounded-full hover:bg-yy hover:shadow-3m duration-700"
+                            onClick={handlerToTop}
+                        >
+                            <FontAwesomeIcon
+                                icon={faArrowUp}
+                                className="text-md "
+                            />
+                        </Button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {showModal && (
                 <NavBar

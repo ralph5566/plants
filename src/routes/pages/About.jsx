@@ -6,7 +6,9 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 const About = () => {
     const [showVideo, setShowVideo] = useState(false)
     const cssCss =
-        'fixed ml-auto mt-auto w-1/5 bottom-20 right-0 max-sm:hidden hover:rotate-6 duration-300'
+        'fixed ml-auto mt-auto w-1/6 top-20 max-lg:top-64 left-5 max-sm:hidden hover:rotate-2 duration-700'
+    const cssCss2 =
+        'fixed ml-auto mt-auto w-1/5 bottom-12 right-0 max-sm:hidden hover:rotate-6 duration-700'
 
     function showVideoHandler() {
         setShowVideo(() => !showVideo)
@@ -35,12 +37,12 @@ const About = () => {
                         src="plants/img/IMG_003.JPG"
                         // src="http://localhost:3000/images/IMG_003.JPG"
                         alt="03"
-                        className=" relative w-full h-[100%] hover:scale-105 duration-300"
+                        className="relative w-full h-[100%] hover:scale-105 duration-500"
                     />
                     <img
                         src="/plants/img/IMG_play.png"
                         // src="http://localhost:3000/images/IMG_play.png"
-                        className="z-10 absolute top-[40%] right-[86%] w-1/4 hover:scale-105"
+                        className="z-10 absolute top-[40%] right-[86%] w-1/4 hover:scale-105 duration-500"
                     />
                 </a>
 
@@ -52,12 +54,17 @@ const About = () => {
                     <br />
                     透過認識與教育，了解並認識他們，揭開真面目，降妖除魔
                 </p>
-
                 <img
                     className={cssCss}
+                    src="/plants/img/IMG_NO01.png"
+                    alt="02"
+                />
+                <img
+                    className={cssCss2}
                     src="/plants/img/IMG_NO08_3.png"
                     alt="02"
                 />
+
                 {/* <img
                     className={cssCss}
                     src="http://localhost:3000/images/IMG_NO08_3.png"

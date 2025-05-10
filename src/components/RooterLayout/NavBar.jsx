@@ -11,9 +11,9 @@ const NavBar = ({ showModal, onBarClose }) => {
     const navigate = useNavigate()
 
     let nav_link =
-        'py-1 text-lightBlue hover:text-yy hover:underline hover:underline-offset-8 '
+        'py-1 text-lightBlue hover:text-yy hover:underline hover:underline-offset-8 hover:text-[1.35rem]'
 
-    let nav_active = 'py-1 text-yy  underline underline-offset-8'
+    let nav_active = 'py-1 text-yy underline underline-offset-8'
 
     function plantsHandler(evt) {
         evt.preventDefault()
@@ -32,7 +32,7 @@ const NavBar = ({ showModal, onBarClose }) => {
                     >
                         <FontAwesomeIcon
                             icon={faXmark}
-                            className="hover:text-yy"
+                            className="hover:text-yy hover:text-[2.5rem]"
                         />
                     </button>
 

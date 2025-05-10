@@ -33,7 +33,7 @@ const Game = () => {
                                 </h1>
                                 <button
                                     onClick={startGameHandler}
-                                    className="mt-20 max-ss:my-20 w-1/3 z-10 px-3 mx-auto shadow-2m rounded-lg hover:shadow-3m hover:text-yy"
+                                    className="mt-20 max-ss:my-20 w-1/3 z-10 px-3 mx-auto shadow-2m rounded-lg hover:shadow-3m hover:text-yy duration-300"
                                 >
                                     開始遊戲
                                 </button>

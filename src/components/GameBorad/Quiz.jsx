@@ -13,7 +13,7 @@ const Quiz = ({ quiz, onAnswer, answerState, userAnswer, onTimeout }) => {
         <>
             <div className="flex flex-col w-full mx-auto">
                 <img
-                    className="w-[19%] max-md:w-1/2 mx-auto mt-8 max-xl:mt-14 max-md:my-3"
+                    className="illustrate w-[19%] max-md:w-1/2 mx-auto mt-8 max-xl:mt-14 max-md:my-3"
                     src={quiz.img}
                     // src={`http://localhost:3000/${quiz.img}`}
                     alt={quiz.plant}
@@ -25,10 +25,11 @@ const Quiz = ({ quiz, onAnswer, answerState, userAnswer, onTimeout }) => {
                         {shuffledAnswers.current.map((answer, index) => {
                             const isSelected = userAnswer === answer
                             let cssClass =
-                                'w-1/2 max-md:w-3/4 px-2 mx-auto rounded-lg mt-6 shadow-3i hover:shadow-4i hover:bg-hoverPup max-ss:hover:bg-purple'
+                                'w-1/2 max-md:w-3/4 px-2 mx-auto rounded-lg mt-6 shadow-3i hover:shadow-4i hover:bg-hoverPup hover:text-lg max-ss:hover:bg-purple duration-500'
 
                             if (answerState === 'answer' && isSelected) {
-                                cssClass += ' bg-deepBlue pointer-events-none'
+                                cssClass +=
+                                    ' bg-deepBlue pointer-events-none text-lg'
                             }
                             // else if (answerState === 'answer') {
                             //     cssClass += ' bg-purple pointer-events-none'
@@ -37,12 +38,14 @@ const Quiz = ({ quiz, onAnswer, answerState, userAnswer, onTimeout }) => {
                                 answerState === 'wrong' &&
                                 answer === quiz.answer
                             ) {
-                                cssClass += ' bg-red pointer-events-none'
+                                cssClass +=
+                                    ' bg-red pointer-events-none text-xl '
                             } else if (
                                 answerState === 'correct' &&
                                 isSelected
                             ) {
-                                cssClass += ' bg-green pointer-events-none'
+                                cssClass +=
+                                    ' bg-green pointer-events-none text-xl '
                             }
                             // else if (
                             //     answerState === 'correct' ||
@@ -61,7 +64,7 @@ const Quiz = ({ quiz, onAnswer, answerState, userAnswer, onTimeout }) => {
                                     onClick={() => onAnswer(answer)}
                                     disabled={answerState !== ''}
                                 >
-                                    <li className="hover:text-yy max-ss:hover:text-lightBlue">
+                                    <li className="hover:text-lightBlue">
                                         {answer}
                                     </li>
                                 </button>

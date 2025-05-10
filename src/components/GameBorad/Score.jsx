@@ -10,15 +10,15 @@ const Score = ({ score, onStart }) => {
     } else if (score >= 60) {
         Img = '/plants/img/IMG_NO01.png'
         // Img = `http://localhost:3000/images/IMG_NO08_2.png`
-        cssClass += ' w-1/4 max-md:w-4/5'
+        cssClass += ' illustrate w-1/4 max-md:w-4/5'
     } else if (score >= 20) {
         Img = '/plants/img/IMG_NO04.png'
         // Img = `http://localhost:3000/images/IMG_NO04.png`
-        cssClass += ' w-1/4 max-md:w-4/5'
+        cssClass += ' illustrate w-1/4 max-md:w-4/5'
     } else if (score >= 0) {
         Img = '/plants/img/IMG_NO15.png'
         // Img = `http://localhost:3000/images/IMG_NO01.png`
-        cssClass += ' w-1/5 max-md:w-4/5'
+        cssClass += ' illustrate w-1/5 max-md:w-4/5'
     }
 
     return (
@@ -35,7 +35,7 @@ const Score = ({ score, onStart }) => {
 
                 <button
                     onClick={onStart}
-                    className=" my-12 max-md:my-10 px-5 shadow-2m rounded-lg hover:shadow-3m hover:text-yy"
+                    className=" my-12 max-md:my-10 px-5 shadow-2m rounded-lg hover:shadow-3m hover:text-yy duration-300"
                 >
                     重新開始遊戲
                 </button>

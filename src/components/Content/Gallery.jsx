@@ -38,22 +38,24 @@ const Gallery = () => {
             {navigation.state === 'loading' && <h1>Loading...</h1>}
             {navigation.state !== 'loading' && (
                 <Plants>
-                    <ul className="inline-block w-4/5 m-[5%] max-md:mt-16  ">
+                    <ul className="inline-block w-4/5 m-[5%] max-md:mt-16 duration-300">
                         {/* <Suspense fallback={<p>Loading...</p>}> */}
                         {/* <Await resolve={plants}> */}
                         {plants.map((plant) => (
                             <Link
-                                className="inline-block mx-10 my-4 "
+                                className="inline-block mx-10 my-4 duration-300"
                                 key={plant.no}
                                 onClick={() => showDetailHandler(plant.no)}
                             >
-                                <img
-                                    src={plant.img}
-                                    // src={`http://localhost:3000/${plant.img}`}
-                                    className="flex w-[20vh] rounded-lg p-3 border-lightBlue border hover:border-yy"
-                                    alt={plant.name}
-                                />
-                                <h2 className="mt-4 ">{plant.name}</h2>
+                                <div className="flex w-[20vh] rounded-lg p-3 border-lightBlue border hover:border-yy duration-500 ">
+                                    <img
+                                        src={plant.img}
+                                        // src={`http://localhost:3000/${plant.img}`}
+                                        className="hover:scale-[1.1] hover:rotate-2 duration-700"
+                                        alt={plant.name}
+                                    />
+                                </div>
+                                <h2 className="mt-4">{plant.name}</h2>
                             </Link>
                         ))}
                         {/* </Await> */}

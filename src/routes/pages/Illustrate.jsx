@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
 
+// import { motion } from 'framer-motion'
+
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -75,7 +77,7 @@ function Illustrate() {
                                     <img
                                         src={plant.img}
                                         // src={`http://localhost:3000/${plant.img}`}
-                                        className="w-40 mx-20 my-0 max-md:mx-auto"
+                                        className="w-40 mx-20 my-0 max-md:mx-auto hover:scale-[1.1] hover:rotate-2 duration-500"
                                         alt={plant.name}
                                     />
                                 </Link>
@@ -99,20 +101,21 @@ function Illustrate() {
                             }.png`}
                             // src={plantNo.img}
                             // src={`http://localhost:3000/${plantNo.img}`}
-                            className="mx-auto w-2/3"
+                            className="illustrate mx-auto w-2/3"
                             alt={plantNo.name}
                         />
                     </div>
                     <div className="flex flex-col justify-center mx-auto my-auto px-12 max-md:px-0 items-start w-3/4">
-                        <h3 className="flex text-left text-4xl leading-loose max-md:text-center max-md:mx-auto max-md:text-2xl max-md:leading-[3.5rem]">
+                        <h1 className="flex text-left text-4xl leading-loose max-md:text-center max-md:mx-auto max-xl:text-2xl max-xl:leading-[3rem]">
                             {plantNo.name}
                             <br />
                             {plantNo.genus} {plantNo.type}
-                        </h3>
-
-                        <h1 className="italic my-5 text-2xl leading-loose">
-                            &ldquo; {plantNo.title} &rdquo;
                         </h1>
+
+                        <h2 className="italic my-5 text-2xl leading-10 max-md:mx-auto max-xl:text-xl max-xl:leading-10">
+                            &ldquo; {plantNo.title} &rdquo;
+                        </h2>
+
                         <h3 className="mb-4">{plantNo.desc}</h3>
                         <h3 className="mb-8 mr-32 text-left max-xl:mr-0 max-md:text-center max-md:mr-0">
                             {plantNo.character}

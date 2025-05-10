@@ -8,7 +8,7 @@ const SpecialDetail = ({ onShow, img, showModal }) => {
             <Modal open={showModal}>
                 <div className="bg-content-bgc bg-contain w-full">
                     <button
-                        className=" absolute w-10 h-10 top-5 right-4 t text-4xl"
+                        className=" absolute w-10 h-10 top-5 right-4 t text-4xl hover:text-yy hover:text-[2.5rem]"
                         onClick={onShow}
                     >
                         <FontAwesomeIcon icon={faXmark} />

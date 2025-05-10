@@ -16,7 +16,7 @@ const HeaderBar = ({ onShowBar }) => {
     const navigate = useNavigate()
 
     let nav_link =
-        ' text-lg mr-4 duration-200 text-lightBlue hover:underline hover:underline-offset-8 '
+        ' text-lg mr-4 duration-200 text-lightBlue hover:underline hover:underline-offset-8 hover:text-xl duration-500'
 
     let nav_active = 'text-lg mr-4 text-yy underline underline-offset-8 '
 
@@ -38,7 +38,7 @@ const HeaderBar = ({ onShowBar }) => {
                         <img
                             src="/plants/img/IMG_logo02.png"
                             // src="http://localhost:3000/images/IMG_logo02.png"
-                            className="w-24 me-7 relative top-px cursor-pointer"
+                            className="w-24 me-7 relative top-px cursor-pointer "
                             alt="LOGO"
                         />
                     </Link>
@@ -75,6 +75,15 @@ const HeaderBar = ({ onShowBar }) => {
                         to="/special"
                     >
                         宣傳
+                    </NavLink>
+
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? nav_active : nav_link
+                        }
+                        to="/test"
+                    >
+                        Test
                     </NavLink>
                 </ul>
             </header>

@@ -3,7 +3,7 @@ const Button = ({ type = 'button', children, ...props }) => {
         <>
             <button
                 type={type}
-                className="duration-200 mr-2 cursor-pointer px-6 rounded-lg border-none bg-purple hover:bg-hoverPup hover:text-tahiti"
+                className="duration-300 mx-auto cursor-pointer px-6 rounded-lg border-none bg-purple hover:bg-hoverPup hover:text-lightBlue"
                 {...props}
             >
                 {children}

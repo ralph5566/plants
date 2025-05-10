@@ -7,21 +7,21 @@ import ProgressBar from './ProgressBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-const TIMER = 8000
+const TIMER = 12000
 
 const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
     // const post = useLoaderData()
     const postNo = plants[no - 1]
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         onPlant()
-    //     }, TIMER)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            onPlant()
+        }, TIMER)
 
-    //     return () => {
-    //         clearTimeout(timer)
-    //     }
-    // }, [onPlant])
+        return () => {
+            clearTimeout(timer)
+        }
+    }, [onPlant])
 
     // if (!post) {
     //     return (
@@ -43,16 +43,16 @@ const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
         <>
             <Modal open={plantModal}>
                 <button
-                    className=" absolute w-10 h-10 top-5 right-4 t text-4xl hover:text-yy"
+                    className="absolute w-10 h-10 top-5 right-4 t text-4xl hover:text-yy hover:text-[2.5rem]"
                     onClick={onPlant}
                 >
                     <FontAwesomeIcon icon={faXmark} />
                 </button>
                 <div className="bg-content-bgc bg-cover w-full">
-                    <main className="flex flex-col w-[80%] mx-auto my-auto items-center ">
+                    <main className="flex flex-col w-[80%] mx-auto my-auto max-md:mt-20 ">
                         <div className="w-[95%] mx-auto my-auto">
                             <img
-                                className=" w-80 max-xl:w-52 max-sm:w-36 mx-auto mt-5"
+                                className="illustrate w-80 max-xl:w-52 max-sm:w-48 mx-auto mt-5"
                                 src={postNo.img}
                                 // src={`http://localhost:3000/${postNo.img}`}
                             />
@@ -67,7 +67,7 @@ const PlantsDetails = ({ plants, onPlant, no, plantModal }) => {
                         </div>
                     </main>
 
-                    {/* <ProgressBar timer={TIMER} /> */}
+                    <ProgressBar timer={TIMER} />
                 </div>
             </Modal>
         </>
