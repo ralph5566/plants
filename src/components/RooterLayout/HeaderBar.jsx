@@ -18,7 +18,8 @@ const HeaderBar = ({ onShowBar }) => {
     let nav_link =
         ' text-lg mr-4 duration-200 text-lightBlue hover:underline hover:underline-offset-8 hover:text-xl duration-500'
 
-    let nav_active = 'text-lg mr-4 text-yy underline underline-offset-8 '
+    let nav_active =
+        'text-lg mr-4 text-yy underline underline-offset-8 cursor-default'
 
     function plantsHandler(evt) {
         evt.preventDefault()
@@ -77,14 +78,14 @@ const HeaderBar = ({ onShowBar }) => {
                         宣傳
                     </NavLink>
 
-                    <NavLink
+                    {/* <NavLink
                         className={({ isActive }) =>
                             isActive ? nav_active : nav_link
                         }
                         to="/test"
                     >
                         Test
-                    </NavLink>
+                    </NavLink> */}
                 </ul>
             </header>
 

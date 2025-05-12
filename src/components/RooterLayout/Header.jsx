@@ -59,8 +59,8 @@ const Header = () => {
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, ease: 'easeOut' }}
-                        exit={{ y: -30, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        exit={{ y: -50, opacity: 0 }}
                         className="fixed bottom-10 left-10 z-50"
                     >
                         <Button

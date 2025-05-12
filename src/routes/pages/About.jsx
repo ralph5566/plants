@@ -6,27 +6,41 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 const About = () => {
     const [showVideo, setShowVideo] = useState(false)
     const cssCss =
-        'fixed ml-auto mt-auto w-1/6 top-20 max-lg:top-64 left-5 max-sm:hidden hover:rotate-2 duration-700'
+        'illustrate fixed ml-auto mt-auto w-1/6 top-20 max-lg:top-64 left-5 max-sm:hidden hover:rotate-2 duration-700'
     const cssCss2 =
-        'fixed ml-auto mt-auto w-1/5 bottom-12 right-0 max-sm:hidden hover:rotate-6 duration-700'
+        'illustrate fixed ml-auto mt-auto w-1/5 bottom-12 right-0 max-sm:hidden hover:rotate-6 duration-700'
 
     function showVideoHandler() {
         setShowVideo(() => !showVideo)
     }
     return (
         <>
-            <div className="my-28 mx-auto w-[60%] overflow-hidden ">
-                <h1 className="text-3xl  ">關 於 我 們</h1>
+            <div className="my-28 mx-auto w-[60%] overflow-hidden">
+                <h1 className="text-3xl text-yy">關 於 我 們</h1>
                 <p className="mt-5 ">
-                    最初是我們受綠鬣蜥氾濫的新聞啟發，但相比起會動的動物，腳下的植物更容易被人們所忽略，造成的影響同樣不容小覷，因次想讓更多人了解他們所帶來的威脅與知識
+                    我們是來自中原大學商業設計系的禁植入侵
+                    <br />
+                    這個主題最初是受綠鬣蜥氾濫的新聞啟發，因此決定了外來種主題
+                    <br />
+                    但相比起會動的動物，腳下安靜的植物更容易被人們所忽略，造成的影響同樣不容小覷
+                    <br />
+                    因此想讓更多人了解他們所帶來的威脅與知識
                 </p>
 
-                <h1 className="text-3xl mt-20">外 來 入 侵 種</h1>
-                <p className=" mt-5 z-20 mb-20">
-                    隨著全球化的發展,有意或無意引進的外來物種越來越常見，其中一些造成負面影響即為「外來入侵種」
+                <h1 className="text-3xl mt-20  text-yy">什麼是外來入侵種？</h1>
+                <div className=" mt-5 z-20 mb-20">
+                    隨著全球化發展，人類有意或無意地引進了許多外來物種
                     <br />
-                    主要造成兩種負面影響，其一是對人類的影響，造成經濟損失或健康威脅。其二是對生態威脅，本土物種會被驅離或是淘汰，並造成生態災害
-                </p>
+                    其中一部分在新環境中快速擴散、難以控制，並對當地造成嚴重影響，這些就被稱為「外來入侵種」
+                    <div className="my-[30px]">
+                        <div className="text-2xl mb-10">
+                            牠們帶來的危害主要有兩類：
+                        </div>
+                        一是對人類的衝擊，例如農業損失、經濟損害，甚至健康風險
+                        <br />
+                        二是對生態的威脅，可能排擠或淘汰原生物種，破壞整體生態平衡
+                    </div>
+                </div>
 
                 <a
                     src="https://www.youtube.com/embed/GHFDb82kW8Q?si=Hrbh_kdNxkCDBqjH&amp;controls=0"
@@ -46,13 +60,17 @@ const About = () => {
                     />
                 </a>
 
-                <h1 className="text-3xl mt-20 leading-[3.5rem]">
+                <h1 className="text-3xl mt-20 leading-[3.5rem] text-yy">
                     天反時為災 。 地反物為妖
                 </h1>
                 <p className="mt-5 z-20">
-                    妖怪皆由草木或動物等轉變的，也是怪異或反常的事物的集合，源於人們對未知的恐懼與不解
+                    將違背自然節律、失控蔓延的草木與生物，視為妖異之物，正是體現人們對未知世界的投射與恐懼
                     <br />
-                    透過認識與教育，了解並認識他們，揭開真面目，降妖除魔
+                    當外來種佔據原生棲地、擾亂自然秩序，它們不再只是植物或動物，而是化身為生態中的妖怪
+                    <br />
+                    然而，妖由無知而生，唯有知識能破迷霧，透過理解與教育，認識這些入侵者的真面目
+                    <br />
+                    識破其弱點，才能真正「降妖除魔」，守護我們的自然家園
                 </p>
                 <img
                     className={cssCss}
