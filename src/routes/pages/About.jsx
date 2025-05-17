@@ -42,7 +42,9 @@ const About = () => {
                     因此想讓更多人了解他們所帶來的威脅與知識
                 </p>
 
-                <h1 className="text-3xl mt-20  text-yy">什麼是外來入侵種？</h1>
+                <h1 className="text-3xl mt-20 leading-[3.5rem] text-yy">
+                    什麼是外來入侵種？
+                </h1>
                 <div className=" mt-5 z-20 mb-20">
                     隨著全球化發展，人類有意或無意地引進了許多外來物種
                     <br />

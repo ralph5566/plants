@@ -107,7 +107,7 @@ function Illustrate() {
                 )}
                 <AnimatePresence>
                     {plantNo && (
-                        <main className="inline-flex max-lg:flex-col w-full justify-center my-28 max-lg:mt-20 max-md:mt-5 max-xl:mb-6 ">
+                        <main className="inline-flex max-lg:flex-col w-full justify-center my-28 max-lg:mt-20 max-md:mt-5 max-xl:mb-6 overflow-hidden">
                             {/* IMG_NO08_3.png */}
                             <div className="relative w-1/2 max-lg:w-full max-xl:my-auto">
                                 {/* <div className="mx-auto w-2/3"></div> */}
