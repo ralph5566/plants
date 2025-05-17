@@ -1,21 +1,36 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Modal from '../../components/Modal/Modal'
+import { AnimatePresence, motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     const [showVideo, setShowVideo] = useState(false)
+    const [showImg, setShowImg] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowImg(window.scrollY > 150)
+        }
+
+        // window.addEventListener('scroll', () => {
+        //     document.querySelector('.illustrate').classList.add('.showImg')
+        // })
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     const cssCss =
-        'illustrate fixed ml-auto mt-auto w-1/6 top-20 max-lg:top-64 left-5 max-sm:hidden hover:rotate-2 duration-700'
+        'fixed w-1/6 top-20 max-lg:top-64 left-5 max-sm:hidden hover:rotate-2 duration-700'
     const cssCss2 =
-        'illustrate fixed ml-auto mt-auto w-1/5 bottom-12 right-0 max-sm:hidden hover:rotate-6 duration-700'
+        'fixed ml-auto mt-auto w-1/5 bottom-12 right-0 max-sm:hidden hover:rotate-6 duration-700'
 
     function showVideoHandler() {
         setShowVideo(() => !showVideo)
     }
     return (
         <>
-            <div className="my-28 mx-auto w-[60%] overflow-hidden">
+            <div className="my-28 mx-auto w-[60%] overflow-hidden relative">
                 <h1 className="text-3xl text-yy">關 於 我 們</h1>
                 <p className="mt-5 ">
                     我們是來自中原大學商業設計系的禁植入侵
@@ -45,13 +60,13 @@ const About = () => {
                 <a
                     src="https://www.youtube.com/embed/GHFDb82kW8Q?si=Hrbh_kdNxkCDBqjH&amp;controls=0"
                     onClick={showVideoHandler}
-                    className="relative cursor-pointer"
+                    className="relative cursor-pointer "
                 >
                     <img
                         src="plants/img/IMG_003.JPG"
                         // src="http://localhost:3000/images/IMG_003.JPG"
                         alt="03"
-                        className="relative w-full h-[100%] hover:scale-105 duration-500"
+                        className="relative w-full h-[90%] hover:scale-105 duration-500"
                     />
                     <img
                         src="/plants/img/IMG_play.png"
@@ -72,16 +87,68 @@ const About = () => {
                     <br />
                     識破其弱點，才能真正「降妖除魔」，守護我們的自然家園
                 </p>
-                <img
-                    className={cssCss}
-                    src="/plants/img/IMG_NO01.png"
-                    alt="02"
-                />
-                <img
-                    className={cssCss2}
-                    src="/plants/img/IMG_NO08_3.png"
-                    alt="02"
-                />
+                <AnimatePresence>
+                    {showImg && (
+                        <>
+                            <motion.img
+                                key="img1"
+                                className={cssCss}
+                                src="/plants/img/IMG_NO01.png"
+                                alt="02"
+                                initial={{ opacity: 0, x: -200, rotate: 10 }}
+                                animate={{
+                                    x: [0, -10, 0],
+                                    y: [0, -20, 0], // 漂浮動畫
+                                    opacity: 1,
+                                    rotate: [0, -10, 0, 10, 0],
+                                }}
+                                transition={{
+                                    opacity: { duration: 0.3 }, // 淡入
+                                    y: {
+                                        duration: 3,
+                                        ease: 'easeInOut',
+                                        repeat: Infinity,
+                                    },
+
+                                    rotate: {
+                                        duration: 5,
+                                        ease: 'easeInOut',
+                                        repeat: Infinity,
+                                    },
+                                }}
+                                exit={{ opacity: 0, x: 200 }}
+                            />
+                            <motion.img
+                                key="img2"
+                                className={cssCss2}
+                                src="/plants/img/IMG_NO08_3.png"
+                                alt="02"
+                                initial={{ opacity: 0, x: 200, rotate: 5 }}
+                                animate={{
+                                    x: [0, -10, 0],
+                                    y: [0, -20, 0], // 漂浮動畫
+                                    opacity: 1,
+                                    rotate: [0, -2, 0, 5, 0],
+                                }}
+                                transition={{
+                                    opacity: { duration: 0.3 }, // 淡入
+                                    y: {
+                                        duration: 3,
+                                        ease: 'easeInOut',
+                                        repeat: Infinity,
+                                    },
+
+                                    rotate: {
+                                        duration: 5,
+                                        ease: 'easeInOut',
+                                        repeat: Infinity,
+                                    },
+                                }}
+                                exit={{ opacity: 0, x: -200 }}
+                            />
+                        </>
+                    )}
+                </AnimatePresence>
 
                 {/* <img
                     className={cssCss}

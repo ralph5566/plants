@@ -32,7 +32,7 @@ const NavBar = ({ showModal, onBarClose }) => {
                     >
                         <FontAwesomeIcon
                             icon={faXmark}
-                            className="hover:text-yy hover:text-[2.5rem]"
+                            className="hover:text-yy hover:text-[2.5rem] "
                         />
                     </button>
 

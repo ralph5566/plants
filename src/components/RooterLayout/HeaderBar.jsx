@@ -91,7 +91,7 @@ const HeaderBar = ({ onShowBar }) => {
 
             <header className="hidden max-md:flex justify-center p-20 w-full border-b-4 border-yy bg-black">
                 <button
-                    className=" absolute mt-auto right-5"
+                    className=" absolute mt-auto right-5 top-20"
                     type="button"
                     onClick={() => onShowBar()}
                 >

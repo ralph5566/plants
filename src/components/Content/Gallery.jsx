@@ -43,7 +43,7 @@ const Gallery = () => {
                         {/* <Await resolve={plants}> */}
                         {plants.map((plant) => (
                             <Link
-                                className="inline-block mx-10 my-4 duration-300"
+                                className="inline-block mx-10 my-4 duration-300 "
                                 key={plant.no}
                                 onClick={() => showDetailHandler(plant.no)}
                             >
