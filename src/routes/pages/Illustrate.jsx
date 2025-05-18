@@ -105,13 +105,14 @@ function Illustrate() {
                         <h2>獲取失敗</h2>
                     </>
                 )}
-                <AnimatePresence>
-                    {plantNo && (
-                        <main className="inline-flex max-lg:flex-col w-full justify-center my-28 max-lg:mt-20 max-md:mt-5 max-xl:mb-6 overflow-hidden">
-                            {/* IMG_NO08_3.png */}
-                            <div className="relative w-1/2 max-lg:w-full max-xl:my-auto">
-                                {/* <div className="mx-auto w-2/3"></div> */}
-                                <div className="relative p-52 py-96 max-lg:py-92 max-md:py-80 max-sm:py-64 max-ss:py-48">
+
+                <main className="inline-flex max-lg:flex-col w-full justify-center my-28 max-lg:mt-20 max-md:mt-5 max-xl:mb-6 overflow-hidden">
+                    {/* IMG_NO08_3.png */}
+                    <div className="relative w-1/2 max-lg:w-full max-xl:my-auto">
+                        {/* <div className="mx-auto w-2/3"></div> */}
+                        <div className="relative p-52 py-96 max-lg:py-92 max-md:py-80 max-sm:py-64 max-ss:py-48">
+                            <AnimatePresence mode="wait">
+                                {plantNo && (
                                     <motion.img
                                         key={plantNo.no}
                                         src={`/plants/img/IMG_NO${
@@ -145,29 +146,36 @@ function Illustrate() {
                                                 repeat: Infinity,
                                             },
                                         }}
-                                        exit={{ opacity: 0, x: 200 }}
+                                        exit={{
+                                            opacity: 0,
+                                            x: 200,
+                                            transition: {
+                                                duration: 0.8, // 讓 x 和 opacity 同步
+                                                ease: 'easeInOut',
+                                            },
+                                        }}
                                     />
-                                </div>
-                            </div>
-                            <div className="flex flex-col justify-center mx-auto my-auto px-12 max-lg:px-0 max-lg:mt-32 max-md:mt-5 items-start w-3/4">
-                                <h1 className="flex text-left text-4xl leading-loose max-lg:text-center max-lg:mx-auto max-xl:text-2xl max-xl:leading-[3rem]">
-                                    {plantNo.name}
-                                    <br />
-                                    {plantNo.genus} {plantNo.type}
-                                </h1>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-center mx-auto my-auto px-12 max-lg:px-0 max-lg:mt-32 max-md:mt-5 items-start w-3/4">
+                        <h1 className="flex text-left text-4xl leading-loose max-lg:text-center max-lg:mx-auto max-xl:text-2xl max-xl:leading-[3rem]">
+                            {plantNo.name}
+                            <br />
+                            {plantNo.genus} {plantNo.type}
+                        </h1>
 
-                                <h2 className="italic my-5 text-2xl leading-10 max-lg:mx-auto max-xl:text-xl max-xl:leading-10">
-                                    &ldquo; {plantNo.title} &rdquo;
-                                </h2>
+                        <h2 className="italic my-5 text-2xl leading-10 max-lg:mx-auto max-xl:text-xl max-xl:leading-10">
+                            &ldquo; {plantNo.title} &rdquo;
+                        </h2>
 
-                                <h3 className="mb-4">{plantNo.desc}</h3>
-                                <h3 className="mb-8 mr-32 text-left max-xl:mr-0 max-lg:text-center max-lg:mr-0">
-                                    {plantNo.character}
-                                </h3>
-                            </div>
-                        </main>
-                    )}
-                </AnimatePresence>
+                        <h3 className="mb-4">{plantNo.desc}</h3>
+                        <h3 className="mb-8 mr-32 text-left max-xl:mr-0 max-lg:text-center max-lg:mr-0">
+                            {plantNo.character}
+                        </h3>
+                    </div>
+                </main>
             </Plants>
         </>
     )
